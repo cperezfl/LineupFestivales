@@ -133,17 +133,17 @@ elif seccion == "Palabras clave":
 
     with col2:
         st.markdown("### Expansión IA")
-        st.markdown("""
-        - lineup composition  
-        - ticket demand modeling  
+        st.markdown(""" 
         - purchase intention  
-        - audience behavior analysis  
-        - artist popularity metrics  
-        - genre diversification  
-        - event attendance prediction  
+        - consumer behavior analysis  
         - demand forecasting  
+        - event attendance  
         - cultural consumption  
-        - entertainment economics  
-        - recommender systems  
-        - predictive analytics  
+        - entertainment industry  
+        - marketing analytics  
+        - audience segmentation  
+        - predictive modeling  
+        - data-driven decision making  
+        - customer preferences  
+        - market demand  
         """)
