@@ -1,10 +1,20 @@
 import streamlit as st
 import os
 
+# Configuración
 st.set_page_config(page_title="Idea de Investigación", layout="wide")
 
 # -----------------------
-# SIDEBAR (NAVEGACIÓN)
+# LOGO SUPERIOR DERECHO
+# -----------------------
+st.markdown("""
+<div style="position:fixed; top:10px; right:20px; text-align:right; z-index:1000;">
+    <img src="https://www.uandes.cl/wp-content/uploads/2025/11/UTEM.png" width="80">
+</div>
+""", unsafe_allow_html=True)
+
+# -----------------------
+# SIDEBAR
 # -----------------------
 st.sidebar.title("Navegación")
 
@@ -18,6 +28,13 @@ seccion = st.sidebar.radio(
         "Lineups",
         "Palabras clave"
     ]
+)
+
+# Nombre abajo en sidebar
+st.sidebar.markdown("---")
+st.sidebar.markdown(
+    "<p style='position:fixed; bottom:10px; left:20px; font-size:14px;'>Christian Pérez Flores</p>",
+    unsafe_allow_html=True
 )
 
 # -----------------------
@@ -36,7 +53,7 @@ st.markdown(
 )
 
 # -----------------------
-# FUNCIONES PARA CAJAS
+# FUNCION CAJAS
 # -----------------------
 def caja(titulo, contenido):
     st.markdown(f"""
@@ -47,12 +64,22 @@ def caja(titulo, contenido):
     """, unsafe_allow_html=True)
 
 # -----------------------
-# CONTENIDO POR SECCIÓN
+# SECCIONES
 # -----------------------
 
 if seccion == "Inicio":
-    caja("Área",
-         "OCDE: Ciencias Sociales (Economía y Negocios) / ODS 9: Industria, Innovación e Infraestructura")
+
+    col1, col2 = st.columns([3,1])
+
+    with col1:
+        caja("Área",
+             "OCDE: Ciencias Sociales (Economía y Negocios) / ODS 9: Industria, Innovación e Infraestructura")
+
+    with col2:
+        st.image(
+            "https://upload.wikimedia.org/wikipedia/commons/3/31/Sustainable_Development_Goal-es-09.jpg",
+            use_column_width=True
+        )
 
 elif seccion == "Idea":
     caja("Idea",
@@ -62,7 +89,7 @@ elif seccion == "Fundamento":
     caja("Fundamento o Motivación",
          "La organización de festivales musicales implica decisiones estratégicas de alto costo. Sin embargo, estas decisiones suelen basarse en criterios subjetivos. La Ciencia de Datos permite analizar información de plataformas digitales para identificar patrones en el comportamiento del público.")
 
-    caja("Inserción Laboral",
+    caja("Inserción de Ingenieros en el ámbito Laboral",
          "Este tema se vincula con la formación de ingenieros en Ciencia de Datos capaces de aplicar modelos en industrias creativas, aportando valor mediante análisis predictivo.")
 
 elif seccion == "Problema":
@@ -70,6 +97,7 @@ elif seccion == "Problema":
          "Existe incertidumbre sobre qué características de un lineup generan mayor interés. No está claro si priorizar popularidad, cantidad o diversidad maximiza la venta de entradas.")
 
 elif seccion == "Lineups":
+
     st.subheader("Ejemplos de Lineups")
 
     image_folder = "images"
@@ -107,14 +135,15 @@ elif seccion == "Palabras clave":
         st.markdown("### Expansión IA")
         st.markdown("""
         - lineup composition  
-        - ticket sales prediction  
+        - ticket demand modeling  
         - purchase intention  
-        - audience engagement  
-        - artist ranking  
-        - streaming metrics  
-        - genre segmentation  
-        - event analytics  
+        - audience behavior analysis  
+        - artist popularity metrics  
+        - genre diversification  
+        - event attendance prediction  
         - demand forecasting  
-        - machine learning  
-        - predictive modeling  
+        - cultural consumption  
+        - entertainment economics  
+        - recommender systems  
+        - predictive analytics  
         """)
