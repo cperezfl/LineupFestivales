@@ -8,7 +8,7 @@ st.set_page_config(page_title="Idea de Investigación", layout="wide")
 # LOGO SUPERIOR DERECHO
 # -----------------------
 st.markdown("""
-<div style="position:fixed; top:10px; right:20px; text-align:right; z-index:1000;">
+<div style="position:fixed; top:60px; right:20px; text-align:right; z-index:1000;">
     <img src="https://www.uandes.cl/wp-content/uploads/2025/11/UTEM.png" width="80">
 </div>
 """, unsafe_allow_html=True)
