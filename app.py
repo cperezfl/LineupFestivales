@@ -27,7 +27,7 @@ st.markdown(
 # -----------------------
 
 st.markdown("<h2 style='font-size:26px;'>Área</h2>", unsafe_allow_html=True)
-st.markdown("<p style='font-size:18px;'>Economía y Negocios.</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size:18px;'>OCDE: Ciencias Sociales (Economía y Negocios) / ODS 9: Industria, Innovación e Infraestructura </p>", unsafe_allow_html=True)
 
 st.markdown("<h2 style='font-size:26px;'>Idea</h2>", unsafe_allow_html=True)
 st.markdown("""
